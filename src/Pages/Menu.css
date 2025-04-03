@@ -1,0 +1,130 @@
+
+.menu-page {
+    padding: 2rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .menu-page h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .menu-page h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ff6b6b;
+    margin: 0.8rem auto 0;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+  
+  /* Menu Card Styling */
+  .menu-card {
+    height: auto; /* Changed from fixed height */
+    min-height: 380px; /* Minimum height to maintain consistency */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  
+  /* Smaller image section */
+  .menu-card-img-container {
+    height: 160px; /* Reduced image height */
+    overflow: hidden;
+  }
+  
+  .menu-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-bottom: 2px solid #ff6b6b;
+  }
+  
+  .menu-card:hover .menu-card-img {
+    transform: scale(1.05);
+  }
+  
+  /* Card content area */
+  .menu-card-details {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    color: #222;
+  }
+  
+  .menu-card p {
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    flex-grow: 1;
+  }
+  
+  .menu-card span {
+    display: block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #ff6b6b;
+    margin-top: auto; /* Pushes price to bottom */
+    padding-top: 0.5rem;
+  }
+  
+  /* Image placeholder */
+  .menu-card-img-placeholder {
+    height: 160px;
+    background: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border-bottom: 2px solid #ff6b6b;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .menu-page {
+      padding: 1.5rem 0.5rem;
+    }
+    
+    .menu-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0;
+    }
+    
+    .menu-card {
+      min-height: 350px;
+    }
+    
+    .menu-card-img-container,
+    .menu-card-img-placeholder {
+      height: 140px;
+    }
+  }

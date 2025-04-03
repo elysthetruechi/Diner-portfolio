@@ -1,0 +1,153 @@
+
+.about-page {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .about-hero {
+    height: 60vh;
+    background: url('/diner-interior.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  .about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-title {
+    font-size: 4.5rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    font-weight: 700;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .about-content {
+    display: flex;
+    padding: 0 2rem;
+    gap: 4rem;
+    margin-bottom: 5rem;
+  }
+  
+  .about-text {
+    flex: 2;
+    padding: 2rem;
+  }
+  
+  .about-lead {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .about-lead:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: #ff6b6b;
+  }
+  
+  .highlight {
+    color: #ff6b6b;
+    font-weight: 700;
+  }
+  
+  .accent {
+    font-style: italic;
+    color: #d35400;
+    font-weight: 500;
+  }
+  
+  .about-paragraphs p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .about-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .polaroid-frame {
+    background: white;
+    padding: 1rem 1rem 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+  }
+  
+  .polaroid-frame:hover {
+    transform: rotate(0) scale(1.03);
+  }
+  
+  .polaroid-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #eee;
+  }
+  
+  .polaroid-caption {
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: #666;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      padding: 0 1rem;
+      gap: 2rem;
+    }
+    
+    .about-title {
+      font-size: 3rem;
+    }
+    
+    .about-lead {
+      font-size: 1.6rem;
+    }
+    
+    .polaroid-frame {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
