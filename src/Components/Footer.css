@@ -1,0 +1,131 @@
+/* src/Components/Footer.css */
+
+.footer-container {
+    background-color: #1a1a1a; /* Matches header */
+    color: white;
+    padding: 2rem 1rem 0;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #333;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .footer-section h3 {
+    color: #ff6b6b; /* Matches header accent */
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .footer-section h4 {
+    color: #ff6b6b;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+  }
+  
+  .footer-section p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6b6b;
+    transform: translateY(-3px);
+  }
+  
+  .contact-info, .opening-hours {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li, .opening-hours li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #ddd;
+    font-size: 1.1rem;
+  }
+  
+  .contact-info svg, .opening-hours svg {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    min-width: 20px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #111;
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 2rem;
+  }
+  
+  /* Animation for social icons */
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .social-icons a:hover {
+    animation: float 1.5s ease-in-out infinite;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .footer-section {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+    
+    .contact-info li, .opening-hours li {
+      justify-content: center;
+    }
+    
+    .footer-section h4 {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }

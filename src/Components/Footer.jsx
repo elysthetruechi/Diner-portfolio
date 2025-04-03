@@ -1,13 +1,13 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
-
+import './Footer.css'; // Assuming you have a CSS file for styling
 export default function Footer() {
   return (
     <footer className="footer-container">
       <div className="footer-content">
         {/* Restaurant Info */}
         <div className="footer-section">
-          <h3>Kary's Restaurant</h3>
-          <p>Serving delicious meals since 2023</p>
+          <h3>Kary's Diner</h3>
+          <p>Serving delicious...</p>
           <div className="social-icons">
             <a href="#" aria-label="Facebook"><FaFacebook /></a>
             <a href="#" aria-label="Instagram"><FaInstagram /></a>
